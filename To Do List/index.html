@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <section>
+            <h2>To-Do</h2>
+            <ul id="todoTasks"></ul>
+            <input type="text" id="newTaskInput" placeholder="Add a new task">
+            <input type="text" id="deadlineInput" placeholder="Enter deadline (e.g., 2024-02-01)">
+            <select id="priorityInput">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button onclick="addTask('todo')">Add Task</button>
+        </section>
+        <section>
+            <h2>Completed</h2>
+            <ul id="completedTasks"></ul>
+        </section>
+    </main>
+    <div id="progress">
+        <h2>Progress</h2>
+        <div id="progressBar"></div>
+        <p id="progressStatus">0% Complete</p>
+        <p id="taskCount">Completed tasks: 0 / Total tasks: 0</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
